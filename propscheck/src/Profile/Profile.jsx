@@ -1,15 +1,14 @@
-const Profile = (props,{children}) => {
+const Profile = ({fullName,Bio,Profession,children}) => {
 
-    // const handleName=()=>alert(props.fullName)
+    const handleName=()=>alert(fullName)
 
     return ( 
         <div>
-           <h1>Hi {props.fullName}</h1> 
-            <p>{props.Bio}</p>
-            <h3>{props.Profession}</h3>
-            {/* <span>{props.children}</span> */}
-            {/* {handleName()} */}
-            {children}
+            <span>{children}</span>
+           <h1>Name: {fullName}</h1> 
+            <span style={{textAlign:"block", fontWeight:"bold"}}>Bio: {Bio}</span> <br></br>
+             <span style={{textAlign:"center"}}>Profession: {Profession}</span>
+             {handleName()}
             
         </div>
      );
